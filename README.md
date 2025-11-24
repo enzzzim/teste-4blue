@@ -102,8 +102,6 @@ O backend subirá em:
 
 ## 🌐 **Frontend (React)**
 
-
-
 cd frontend
 
 npm install
@@ -168,8 +166,6 @@ teste-4blue/
 
 O model principal é simples e direto:
 
-
-
 class Message(models.Model):
 
     user = models.CharField(max_length=1)  # 'A' ou 'B'
@@ -190,8 +186,6 @@ class Message(models.Model):
 
 A view principal aceita o parâmetro:
 
-
-
 GET /api/messages/?user=A
 
 GET /api/messages/?user=B
@@ -200,21 +194,54 @@ Somente os registros do usuário correspondente são retornados.
 
 Esse é o requisito principal do teste e está implementado corretamente tanto no backend quanto no frontend.
 
-# 🎯 **6. Avaliação (Checklist)**
+# 🎯 **6. Decisões Técnicas**
 
-Critério	
+# Modelagem de Dados (Django)
 
-Qualidade do código	✔ 
+O model Message foi feito de forma simples, contendo apenas:
 
-Organização	✔ 
+user (A ou B)
 
-Filtragem por usuário	✔
+question
 
-Modelagem	✔ 
+answer
 
-README	✔
+created_at
 
-Funcionalidade	✔ 
+Essa estrutura é suficiente para atender ao desafio, facilita a criação do histórico por usuário e mantém o banco leve e direto. Escolhi o CharField para o usuário por simplicidade, já que só existem dois perfis e não há necessidade de uma tabela relacionada.
+
+# API e Filtragem
+
+A filtragem por usuário é feita diretamente via query param (?user=A), permitindo que o frontend solicite apenas os registros relevantes.
+Isso mantém a API simples, legível e eficiente.
+
+# Gerenciamento de Estado (React)
+
+Foi utilizado Context API para armazenar o usuário ativo, pois:
+
+elimina prop drilling
+
+permite acesso global ao usuário em qualquer parte do app
+
+é leve o suficiente para a escala do projeto.
+
+# Sessão do Chat
+
+As mensagens exibidas no Chat são mantidas apenas em estado local, de forma intencional, garantindo:
+
+isolamento entre sessões
+
+que mensagens não persistam quando o usuário volta para home
+
+clareza entre o comportamento do Chat (sessão) e Histórico (persistência)
+
+# Frontend e Estilização
+
+Optou-se por organizar toda a estilização em um único arquivo styles.css, facilitando:
+
+manutenção
+
+uniformidade visual
 
 # 👨‍💻 **Desenvolvido por**
 

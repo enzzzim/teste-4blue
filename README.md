@@ -82,6 +82,8 @@ O foco principal do desafio é demonstrar:
 
 ## 🔧 **Backend (Django)**
 
+Abra o terminal na pasta principal do projeto ( teste-4blue) e em seguida dê os seguintes comandos:
+
 cd backend
 
 python -m venv venv
@@ -101,6 +103,8 @@ O backend subirá em:
 👉 http://127.0.0.1:8000
 
 ## 🌐 **Frontend (React)**
+
+Abra um novo terminal na pasta principal do projeto e novamente dê os comandos abaixo:
 
 cd frontend
 
@@ -192,8 +196,6 @@ GET /api/messages/?user=B
 
 Somente os registros do usuário correspondente são retornados.
 
-Esse é o requisito principal do teste e está implementado corretamente tanto no backend quanto no frontend.
-
 # 🎯 **6. Decisões Técnicas**
 
 # Modelagem de Dados (Django)
@@ -219,11 +221,9 @@ Isso mantém a API simples, legível e eficiente.
 
 Foi utilizado Context API para armazenar o usuário ativo, pois:
 
-elimina prop drilling
-
 permite acesso global ao usuário em qualquer parte do app
 
-é leve o suficiente para a escala do projeto.
+é leve para a escala do projeto.
 
 # Sessão do Chat
 
@@ -237,7 +237,7 @@ clareza entre o comportamento do Chat (sessão) e Histórico (persistência)
 
 # Frontend e Estilização
 
-Optou-se por organizar toda a estilização em um único arquivo styles.css, facilitando:
+Organizei toda a estilização em um único arquivo styles.css, facilitando:
 
 manutenção
 

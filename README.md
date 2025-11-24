@@ -100,7 +100,7 @@ O backend subirá em:
 
 👉 http://127.0.0.1:8000
 
-🌐 Frontend (React)
+## 🌐 **Frontend (React)**
 
 
 
@@ -114,7 +114,7 @@ O frontend subirá em:
 
 👉 http://localhost:5173/
 
-🗂 3. Estrutura da Aplicação
+# 🗂 **3. Estrutura da Aplicação8**
 
 teste-4blue/
 
@@ -164,7 +164,7 @@ teste-4blue/
 
 └── README.md
 
-🧬 4. Modelagem do Banco
+# 🧬 **4. Modelagem do Banco**
 
 O model principal é simples e direto:
 
@@ -186,7 +186,7 @@ class Message(models.Model):
 
 ✔ Simples e eficiente para o escopo do teste
 
-🔍 5. Lógica de Negócio (Filtragem por Usuário)
+# 🔍 **5. Lógica de Negócio (Filtragem por Usuário)**
 
 A view principal aceita o parâmetro:
 
@@ -200,7 +200,7 @@ Somente os registros do usuário correspondente são retornados.
 
 Esse é o requisito principal do teste e está implementado corretamente tanto no backend quanto no frontend.
 
-🎯 6. Avaliação (Checklist)
+# 🎯 **6. Avaliação (Checklist)**
 
 Critério	
 
@@ -216,6 +216,6 @@ README	✔
 
 Funcionalidade	✔ 
 
-👨‍💻 Desenvolvido por
+# 👨‍💻 **Desenvolvido por**
 
 Enzo Barbosa

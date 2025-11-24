@@ -1,4 +1,4 @@
-# 🧠 Chatbot de Atendimento – Teste Técnico 4blue  
+# 🧠 Chat de Atendimento – Teste Técnico 4blue  
 
 ### por Enzo Barbosa
 
@@ -6,7 +6,7 @@
 
 ## 📌 Sobre o Projeto  
 
-Este repositório contém a implementação do desafio técnico proposto pela **4blue**, envolvendo a construção de um sistema completo de **chatbot com histórico filtrado por usuário**, utilizando **Django (backend)** e **React (frontend)**.
+Este repositório contém a implementação do desafio técnico proposto pela **4blue**, envolvendo a construção de um sistema completo de **chat com histórico filtrado por usuário**, utilizando **Django (backend)** e **React (frontend)**.
 
 O foco principal do desafio é demonstrar:
 
@@ -22,8 +22,6 @@ O foco principal do desafio é demonstrar:
 
 - Clareza e qualidade do README  
 
-O projeto foi desenvolvido com atenção especial a **UI/UX**, incluindo um **tema Dark Mode moderno**.
-
 ---
 
 # **1. Funcionalidades**
@@ -32,7 +30,7 @@ O projeto foi desenvolvido com atenção especial a **UI/UX**, incluindo um **te
 
 - Envio de perguntas pelo usuário ativo.
 
-- Respostas mockadas automáticas (“Bot”).
+- Respostas mockadas automáticas.
 
 - Chat mostra **somente mensagens da sessão atual** (não persistidas visualmente após sair).
 

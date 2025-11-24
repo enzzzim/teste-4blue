@@ -74,7 +74,7 @@ npm run dev
 O frontend subirá em:
 http://localhost:5173/
 
-# **3. Estrutura da Aplicação**
+# 3. Estrutura da Aplicação
 
 teste-4blue/
 │
@@ -101,7 +101,7 @@ teste-4blue/
 │
 └── README.md
 
-# **4. Modelagem do Banco**
+# 4. Modelagem do Banco
 
 O model principal é simples e direto:
 
@@ -110,11 +110,11 @@ class Message(models.Model):
     question = models.TextField()
     answer = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
-✔ Cumpre todos os requisitos
-✔ Facilita filtros por usuário
-✔ Simples e eficiente para o escopo do teste
+✓ Cumpre todos os requisitos
+✓ Facilita filtros por usuário
+✓ Simples e eficiente para o escopo do teste
 
-# **5. Lógica de Negócio (Filtragem por Usuário)**
+# 5. Lógica de Negócio (Filtragem por Usuário)
 A view principal aceita o parâmetro:
 
 GET /api/messages/?user=A

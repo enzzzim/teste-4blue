@@ -1,127 +1,223 @@
-# Chat de Atendimento – Teste Técnico 4blue  
+# 🧠 Chatbot de Atendimento – Teste Técnico 4blue  
+
 ### por Enzo Barbosa
 
 ---
 
-## Sobre o Projeto  
-Este repositório contém a implementação do desafio técnico proposto pela **4blue**, envolvendo a construção de um sistema completo de **chat com histórico filtrado por usuário**, utilizando **Django (backend)** e **React (frontend)**.
+## 📌 Sobre o Projeto  
+
+Este repositório contém a implementação do desafio técnico proposto pela **4blue**, envolvendo a construção de um sistema completo de **chatbot com histórico filtrado por usuário**, utilizando **Django (backend)** e **React (frontend)**.
 
 O foco principal do desafio é demonstrar:
+
 - Boas práticas de código  
+
 - Organização da aplicação  
+
 - Filtragem de dados por usuário  
+
 - Comunicação entre frontend e backend  
+
 - Modelagem adequada no Django  
+
 - Clareza e qualidade do README  
+
+O projeto foi desenvolvido com atenção especial a **UI/UX**, incluindo um **tema Dark Mode moderno**.
 
 ---
 
 # **1. Funcionalidades**
 
-###  Chat
+### 🧩 Chat
+
 - Envio de perguntas pelo usuário ativo.
-- Respostas mockadas automáticas.
+
+- Respostas mockadas automáticas (“Bot”).
+
 - Chat mostra **somente mensagens da sessão atual** (não persistidas visualmente após sair).
 
-### Histórico
+### 📚 Histórico
+
 - Mostra **apenas as mensagens persistidas do usuário ativo**.
+
 - Banco de dados filtra por parâmetro (`?user=A` ou `?user=B`).
+
 - Rolagem interna para grandes volumes de dados.
 
-### Usuários
+### 👥 Usuários
+
 - Alternância direta entre **Usuário A** e **Usuário B**.
+
 - Todo o histórico e chat reagem à troca de usuário.
 
-### Interface
+### 🎨 Interface
+
 - Tema escuro completo.
+
 - Layout responsivo e moderno.
+
 - Componentes organizados e estilizados em um único `styles.css`.
 
-### Tecnologias
+### 🏗 Tecnologias
+
 **Backend:**
+
 - Python 3+
+
 - Django
+
 - Django REST Framework
+
 - SQLite
 
 **Frontend:**
+
 - React (Vite)
+
 - Context API
+
 - Axios
 
 ---
 
-# **2. Como Rodar o Projeto**
+# 🛠 **2. Como Rodar o Projeto**
 
-##  **Backend (Django)**
+## 🔧 **Backend (Django)**
 
 cd backend
+
 python -m venv venv
+
 source venv/bin/activate   # Linux/Mac
+
 venv\Scripts\activate      # Windows
 
 pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
-O backend subirá em:
- http://127.0.0.1:8000
 
-## **Frontend (React)8**
+python manage.py migrate
+
+python manage.py runserver
+
+O backend subirá em:
+
+👉 http://127.0.0.1:8000
+
+🌐 Frontend (React)
+
+
 
 cd frontend
-npm install
-npm run dev
-O frontend subirá em:
-http://localhost:5173/
 
-# 3. Estrutura da Aplicação
+npm install
+
+npm run dev
+
+O frontend subirá em:
+
+👉 http://localhost:5173/
+
+🗂 3. Estrutura da Aplicação
 
 teste-4blue/
+
 │
+
 ├── backend/
+
 │   ├── chat/
+
 │   │   ├── models.py
+
 │   │   ├── views.py
+
 │   │   └── serializers.py
+
 │   ├── config/
+
 │   ├── db.sqlite3
+
 │   └── manage.py
+
 │
+
 ├── frontend/
+
 │   ├── src/
+
 │   │   ├── Components/
+
 │   │   │   ├── Chat/
+
 │   │   │   ├── History/
+
 │   │   │   ├── Home/
+
 │   │   │   └── Layout/
+
 │   │   ├── Context/
+
 │   │   ├── api.js
+
 │   │   └── styles.css
+
 │   └── index.html
+
 │
+
 └── README.md
 
-# 4. Modelagem do Banco
+🧬 4. Modelagem do Banco
 
 O model principal é simples e direto:
 
-class Message(models.Model):
-    user = models.CharField(max_length=1)  # 'A' ou 'B'
-    question = models.TextField()
-    answer = models.TextField()
-    created_at = models.DateTimeField(auto_now_add=True)
-✓ Cumpre todos os requisitos
-✓ Facilita filtros por usuário
-✓ Simples e eficiente para o escopo do teste
 
-# 5. Lógica de Negócio (Filtragem por Usuário)
+
+class Message(models.Model):
+
+    user = models.CharField(max_length=1)  # 'A' ou 'B'
+
+    question = models.TextField()
+
+    answer = models.TextField()
+
+    created_at = models.DateTimeField(auto_now_add=True)
+
+✔ Cumpre todos os requisitos
+
+✔ Facilita filtros por usuário
+
+✔ Simples e eficiente para o escopo do teste
+
+🔍 5. Lógica de Negócio (Filtragem por Usuário)
+
 A view principal aceita o parâmetro:
 
+
+
 GET /api/messages/?user=A
+
 GET /api/messages/?user=B
+
 Somente os registros do usuário correspondente são retornados.
 
 Esse é o requisito principal do teste e está implementado corretamente tanto no backend quanto no frontend.
 
-Desenvolvido por
+🎯 6. Avaliação (Checklist)
+
+Critério	
+
+Qualidade do código	✔ 
+
+Organização	✔ 
+
+Filtragem por usuário	✔
+
+Modelagem	✔ 
+
+README	✔
+
+Funcionalidade	✔ 
+
+👨‍💻 Desenvolvido por
+
 Enzo Barbosa

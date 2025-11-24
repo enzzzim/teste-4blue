@@ -1,5 +1,5 @@
 # Chat de Atendimento – Teste Técnico 4blue  
-### by Enzo Barbosa
+### por Enzo Barbosa
 
 ---
 
@@ -122,51 +122,6 @@ GET /api/messages/?user=B
 Somente os registros do usuário correspondente são retornados.
 
 Esse é o requisito principal do teste e está implementado corretamente tanto no backend quanto no frontend.
-
-# **7. English Version**
-About the Project
-This repository contains the implementation of the technical challenge proposed by 4blue, involving a complete chat + user-filtered message history system, built with Django and React.
-
-The project demonstrates:
-
-Clean and organized code
-
-Clear data modeling
-
-REST API integration
-
-Filtering messages by user
-
-Solid React structure with Context API
-
-Features
-
-User-based message filtering
-
-Session-based chat (non-persistent on UI)
-
-Persistent history (SQLite)
-
-Backend with Django REST
-
-Modern React frontend
-
-Responsive layout
-
-Running the Project
-Backend
-
-cd backend
-python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
-Frontend
-
-cd frontend
-npm install
-npm run dev
 
 Desenvolvido por
 Enzo Barbosa
